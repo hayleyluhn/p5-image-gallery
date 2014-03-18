@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+    
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  
+  <body>
+    <div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+    
+    <div id="links">
+    <a href="img/image1.jpg" title="Butterfly">
+        <img src="img/image1.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image2.jpg" title="Butterfly">
+        <img src="img/image2.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image3.jpg" title="Butterfly">
+        <img src="img/image3.jpg" alt="Butterfly">
+    </a>
+
+      <a href="img/image4.jpg" title="Butterfly">
+        <img src="img/image4.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image5.jpg" title="Butterfly">
+        <img src="img/image5.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image6.jpg" title="Butterfly">
+        <img src="img/image6.jpg" alt="Butterfly">
+    </a>
+
+      <a href="img/image7.jpg" title="Butterfly">
+        <img src="img/image7.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image8.jpg" title="Butterfly">
+        <img src="img/image8.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image9.jpg" title="Butterfly">
+        <img src="img/image9.jpg" alt="Butterfly">
+    </a>
+
+      <a href="img/image10.jpg" title="Butterfly">
+        <img src="img/image10.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image11.jpg" title="Butterfly">
+        <img src="img/image11.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image12.jpg" title="Butterfly">
+        <img src="img/image12.jpg" alt="Butterfly">
+    </a>
+      <a href="img/image13.jpg" title="Butterfly">
+        <img src="img/image13.jpg" alt="Butterfly">
+    </a>
+  
+   <a href="img/image14.jpg" title="Butterfly">
+        <img src="img/image14.jpg" alt="Butterfly">
+    </a>
+    <a href="img/image15.jpg" title="Butterfly">
+        <img src="img/image15.jpg" alt="Butterfly">
+    </a>
+      <a href="img/image16.jpg" title="Butterfly">
+        <img src="img/image16.jpg" alt="Butterfly">
+    </a>
+
+</div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/blueimp-gallery.min.js"></script>
+
+    <script>
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
+
+  </body>
+</html>
